@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: HashiCorp Vault Enterprise on Docker
+description: Vault Enterprise Cluster on Docker
 ---
 
 ---
@@ -14,18 +14,15 @@ tags:
   - terraform
   - raft
   - dr
-  - fluentd
-  - splunk
-  - telegraf
   - tech
 alias:
-  - Vault Enterprise Raft DR Cluster
+  - Vault Enterprise Raft Cluster
 ---
 
 ---
-# INFRA // Vault Enterprise - Raft DR Cluster
+# INFRA // Vault Enterprise on Docker - Raft Cluster
 
-Vault Enterprise in a DR Cluster with Raft Storage Backend.
+Vault Enterprise Cluster with Raft Storage Backend on Docker.
 
 ## Introduction
 
@@ -57,6 +54,7 @@ This spins up:
   # cd docker-vault
   # make -f Makefile clean-vault-all
   ```
+
 
 ## Files
 
