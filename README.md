@@ -170,11 +170,7 @@ No modules.
 
 
 ## Appendix
-- ARM64/V8 Potential Splunk Workarounds
-  - https://github.com/splunk/docker-splunk/issues/516
-  - https://hub.docker.com/r/odidev/docker-splunk/tags
-- Splunk Container in Alpine
-  - https://github.com/andrew207/splunk
+- 
 
 ## References
 - https://www.terraform.io/cli/run
