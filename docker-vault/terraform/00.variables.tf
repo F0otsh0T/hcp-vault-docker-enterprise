@@ -11,24 +11,24 @@
 # VAULT VARIABLES
 
 variable "vault_url" {
-    type = string
-    description = "Vault URL"
-    sensitive = false
-    default = "http://localhost:8200"
+  type        = string
+  description = "Vault URL"
+  sensitive   = false
+  default     = "http://localhost:8200"
 }
 
 variable "vault_license" {
-    type = string
-    description = "Vault Enterprise License"
-    sensitive = true
-    default = ""
+  type        = string
+  description = "Vault Enterprise License"
+  sensitive   = true
+  default     = ""
 }
 
 variable "vault_root_token" {
-    type = string
-    description = "Vault Root Token"
-    sensitive = true
-    default = ""
+  type        = string
+  description = "Vault Root Token"
+  sensitive   = true
+  default     = ""
 }
 
 variable "container_image_vault" {
@@ -160,24 +160,24 @@ variable "docker_restart_vault" {
 # KEYCLOAK VARIABLES
 
 variable "keycloak_url" {
-    type = string
-    description = "KeyCloak URL"
-    sensitive = false
-    default = "http://localhost:8080"
+  type        = string
+  description = "KeyCloak URL"
+  sensitive   = false
+  default     = "http://localhost:8080"
 }
 
 variable "keycloak_user" {
-    type = string
-    description = "KeyCloak User"
-    sensitive = false
-    default = "admin"
+  type        = string
+  description = "KeyCloak User"
+  sensitive   = false
+  default     = "admin"
 }
 
 variable "keycloak_password" {
-    type = string
-    description = "KeyCloak Password"
-    sensitive = true
-    default = ""
-  
+  type        = string
+  description = "KeyCloak Password"
+  sensitive   = true
+  default     = ""
+
 }
 
