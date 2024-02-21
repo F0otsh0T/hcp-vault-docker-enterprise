@@ -13,7 +13,7 @@ export VAULT_S1_IP=$(docker inspect vault_s1 -f '{{range .NetworkSettings.Networ
 
 # Init vault_s1
 echo "Init and unseal vault_s1"
-export VAULT_ADDR=http://localhost:18200
+export VAULT_ADDR=http://localhost:8200
 sleep 10
 vault operator init -format=json -n 1 -t 1 | tee vault.json
 
@@ -22,7 +22,7 @@ echo "Root VAULT TOKEN is: $VAULT_TOKEN"
 
 # Unseal vault_s1
 echo "Unseal vault_s1"
-export VAULT_ADDR=http://localhost:18200
+export VAULT_ADDR=http://localhost:8200
 
 export unseal_key=$(cat vault.json | jq -r '.unseal_keys_b64[0]')
 export unseal_hex=$(cat vault.json| jq -r '.unseal_keys_hex[0]')
@@ -49,7 +49,7 @@ echo "Unseal vault_s3"
 vault operator unseal ${unseal_key}
 
 # Reset vault addr and add vault token
-export VAULT_ADDR=http://localhost:18200
+export VAULT_ADDR=http://localhost:8200
 
 sleep 10
 
