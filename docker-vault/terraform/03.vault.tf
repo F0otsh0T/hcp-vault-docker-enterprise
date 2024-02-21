@@ -7,10 +7,11 @@ resource "docker_image" "vault-ent" {
 
 resource "docker_container" "vault_s1" {
   depends_on = [
-    docker_network.vault-ent-network#,
+    docker_network.vault-ent-network #,
     # docker_container.splunk
   ]
-  image = docker_image.vault-ent.latest
+  #  image = docker_image.vault-ent.latest
+  image = docker_image.vault-ent.name
   name  = var.container_name_vault_s1
   capabilities {
     add = ["IPC_LOCK"]
@@ -59,10 +60,11 @@ resource "docker_container" "vault_s1" {
 
 resource "docker_container" "vault_s2" {
   depends_on = [
-    docker_network.vault-ent-network#,
-#    docker_container.splunk
+    docker_network.vault-ent-network #,
+    #    docker_container.splunk
   ]
-  image = docker_image.vault-ent.latest
+  #  image = docker_image.vault-ent.latest
+  image = docker_image.vault-ent.name
   name  = var.container_name_vault_s2
   capabilities {
     add = ["IPC_LOCK"]
@@ -111,10 +113,11 @@ resource "docker_container" "vault_s2" {
 
 resource "docker_container" "vault_s3" {
   depends_on = [
-    docker_network.vault-ent-network#,
-#    docker_container.splunk
+    docker_network.vault-ent-network #,
+    #    docker_container.splunk
   ]
-  image = docker_image.vault-ent.latest
+  #  image = docker_image.vault-ent.latest
+  image = docker_image.vault-ent.name
   name  = var.container_name_vault_s3
   capabilities {
     add = ["IPC_LOCK"]
