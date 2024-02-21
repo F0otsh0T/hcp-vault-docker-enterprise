@@ -45,7 +45,9 @@ clean-all: clean-vault-all #target ## Clean All
 vault-all: vault-setup vault-init #target ## All Setup Targets for Vault Services
 
 vault-setup: #target ## Spin Up Vault Resources
-	@terraform -chdir=./terraform init && terraform -chdir=./terraform apply -auto-approve
+	@terraform -chdir=./terraform init && terraform -chdir=./terraform apply -auto-approve && \
+	terraform -chdir=./terraform output -json > vault.json
+
 
 ################################
 # VAULT INIT
