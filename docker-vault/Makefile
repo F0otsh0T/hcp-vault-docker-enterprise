@@ -35,7 +35,7 @@ clean-vault-volume: #target ## Clean Vault Volume
 
 clean-vault-all: clean-vault clean-vault-volume #target ## Clean Vault All
 
-clean-all: #target ## Clean All
+clean-all: clean-vault-all #target ## Clean All
 
 ################################
 # SETUP AND RUN VAULT - PERSIST DATA WITH FILE VOLUME
