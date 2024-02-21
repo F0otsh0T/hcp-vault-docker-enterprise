@@ -128,7 +128,7 @@ variable "docker_port_external_vault_s1" {
   type        = number
   description = "Specify Vault S1 External Port Number"
   sensitive   = false
-  default     = "18200"
+  default     = "8200"
 }
 
 variable "docker_port_external_vault_s2" {
